@@ -1,0 +1,25 @@
+<div class="jumbotron">
+<p class="lead">
+<strong>Title:</strong>
+<%= @article.title %>
+</p>
+
+<p class="lead">
+<strong>Text:</strong>
+<%= @article.text %>
+</p>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%= link_to edit_article_path(@article), class: 'btn btn-success' do %>
+    <i class="glyphicon glyphicon-plus"></i> Edit
+<% end %> |
+<%= link_to articles_path, class: 'btn btn-success' do %>
+    <i class="glyphicon glyphicon-arrow-left"></i> Back
+    <% end %> 
+
+ </div>

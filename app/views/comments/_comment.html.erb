@@ -1,0 +1,19 @@
+
+<div class="row">
+<p>
+  <strong>Commenter</strong>
+  <%= comment.commenter %>
+</p>
+ 
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>
+</p>
+</div>
+<p>
+  <%= link_to [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' do %>
+                <i class="glyphicon glyphicon-times"></i> Delete Comment
+                <% end %>
+</p>
