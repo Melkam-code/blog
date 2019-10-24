@@ -7028,3 +7028,1432 @@ Completed 200 OK in 2670ms (Views: 393.8ms | ActiveRecord: 0.0ms)
 Completed 200 OK in 1214ms (Views: 63.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-09-13 08:59:58 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/melkam/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (38.7ms)
+  Rendered shared/_navigation.html.erb (1.2ms)
+Completed 200 OK in 4745ms (Views: 4697.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/news" for ::1 at 2019-09-13 09:00:09 +0300
+Processing by NewsController#news as HTML
+  Rendering news/news.html.erb within layouts/application
+  Rendered news/news.html.erb within layouts/application (4.7ms)
+  Rendered shared/_navigation.html.erb (1.4ms)
+Completed 200 OK in 1775ms (Views: 174.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/news" for ::1 at 2019-09-13 09:00:15 +0300
+Processing by NewsController#news as HTML
+Started GET "/news/news" for ::1 at 2019-09-13 09:00:16 +0300
+Processing by NewsController#news as HTML
+  Rendering news/news.html.erb within layouts/application
+  Rendered news/news.html.erb within layouts/application (4.4ms)
+  Rendered shared/_navigation.html.erb (2.2ms)
+Completed 200 OK in 1096ms (Views: 192.7ms | ActiveRecord: 0.0ms)
+
+
+  Rendering news/news.html.erb within layouts/application
+  Rendered news/news.html.erb within layouts/application (4.2ms)
+  Rendered shared/_navigation.html.erb (0.1ms)
+Completed 200 OK in 1154ms (Views: 265.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for ::1 at 2019-09-13 09:00:19 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+  Rendered shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 162ms (Views: 159.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2019-09-13 09:00:20 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (27.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (103.3ms)
+  Rendered shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 429ms (Views: 259.7ms | ActiveRecord: 29.5ms)
+
+
+Started GET "/articles/3" for ::1 at 2019-09-13 09:00:23 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:14
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (68.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/views/articles/show.html.erb:13
+Started GET "/articles/3/edit" for ::1 at 2019-09-13 09:00:25 +0300
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"3"}
+Filter chain halted as #<Proc:0x00007ff7dc4c3ac0@/home/melkam/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.2.3/lib/action_controller/metal/http_authentication.rb:72> rendered or redirected
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms)
+
+
+  Rendered collection of comments/_comment.html.erb [1 times] (96.5ms)
+  Rendered comments/_form.html.erb (1366.5ms)
+  Rendered articles/show.html.erb within layouts/application (2782.6ms)
+  Rendered shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 3190ms (Views: 2930.5ms | ActiveRecord: 71.8ms)
+
+
+Started GET "/articles/3" for ::1 at 2019-09-13 09:00:36 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:14
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/views/articles/show.html.erb:13
+  Rendered collection of comments/_comment.html.erb [1 times] (4.4ms)
+  Rendered comments/_form.html.erb (8.5ms)
+  Rendered articles/show.html.erb within layouts/application (25.0ms)
+  Rendered shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 308ms (Views: 300.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/3" for ::1 at 2019-09-13 09:00:36 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:14
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/views/articles/show.html.erb:13
+  Rendered collection of comments/_comment.html.erb [1 times] (2.7ms)
+  Rendered comments/_form.html.erb (9.0ms)
+  Rendered articles/show.html.erb within layouts/application (22.0ms)
+  Rendered shared/_navigation.html.erb (1.7ms)
+Completed 200 OK in 175ms (Views: 166.2ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/articles/3/comments/6" for ::1 at 2019-09-13 09:09:53 +0300
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2RNNIwvdFsq9j+EH2HSgFAJH663u9XtyP60UzNkeKCdNImiDgNs7bqnrzRFCK4TMps/vyeetEhiZvKcGznna+w==", "article_id"=>"3", "id"=>"6"}
+Filter chain halted as #<Proc:0x00007ff7f1a98c88@/home/melkam/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.2.3/lib/action_controller/metal/http_authentication.rb:72> rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/articles/3/comments/6" for ::1 at 2019-09-13 09:10:04 +0300
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2RNNIwvdFsq9j+EH2HSgFAJH663u9XtyP60UzNkeKCdNImiDgNs7bqnrzRFCK4TMps/vyeetEhiZvKcGznna+w==", "article_id"=>"3", "id"=>"6"}
+  [1m[36mArticle Load (23.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:12
+  [1m[36mComment Load (15.7ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["article_id", 3], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[36mComment Destroy (43.9ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/comments_controller.rb:14
+  [1m[35m (95.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:14
+Redirected to http://localhost:3000/articles/3
+Completed 302 Found in 196ms (ActiveRecord: 177.8ms)
+
+
+Started GET "/articles/3" for ::1 at 2019-09-13 09:10:04 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:14
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/views/articles/show.html.erb:13
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (5.1ms)
+  Rendered articles/show.html.erb within layouts/application (11.2ms)
+  Rendered shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 355ms (Views: 351.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-10-23 12:59:37 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/melkam/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 575ms (Views: 548.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/sources" for ::1 at 2019-10-23 13:02:04 +0300
+Processing by NewsController#sources as HTML
+Started GET "/news/sources" for ::1 at 2019-10-23 13:02:05 +0300
+Processing by NewsController#sources as HTML
+  Rendering news/sources.html.erb within layouts/application
+  Rendered news/sources.html.erb within layouts/application (5.4ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 4352ms (Views: 99.9ms | ActiveRecord: 0.0ms)
+
+
+  Rendering news/sources.html.erb within layouts/application
+  Rendered news/sources.html.erb within layouts/application (5.7ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 3945ms (Views: 87.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/sources" for ::1 at 2019-10-23 13:02:15 +0300
+Processing by NewsController#sources as HTML
+  Rendering news/sources.html.erb within layouts/application
+  Rendered news/sources.html.erb within layouts/application (5.2ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 2088ms (Views: 144.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/news" for ::1 at 2019-10-23 13:02:19 +0300
+Processing by NewsController#news as HTML
+  Rendering news/news.html.erb within layouts/application
+  Rendered news/news.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navigation.html.erb (1.3ms)
+Completed 200 OK in 1109ms (Views: 138.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/news" for ::1 at 2019-10-23 13:02:25 +0300
+Processing by NewsController#news as HTML
+  Rendering news/news.html.erb within layouts/application
+  Rendered news/news.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1091ms (Views: 72.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/news" for ::1 at 2019-10-23 13:02:28 +0300
+Processing by NewsController#news as HTML
+  Rendering news/news.html.erb within layouts/application
+  Rendered news/news.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 982ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/news" for ::1 at 2019-10-23 13:02:32 +0300
+Processing by NewsController#news as HTML
+  Rendering news/news.html.erb within layouts/application
+  Rendered news/news.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 968ms (Views: 84.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/news" for ::1 at 2019-10-23 13:02:35 +0300
+Processing by NewsController#news as HTML
+  Rendering news/news.html.erb within layouts/application
+  Rendered news/news.html.erb within layouts/application (2.0ms)
+  Rendered shared/_navigation.html.erb (1.4ms)
+Completed 200 OK in 955ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for ::1 at 2019-10-23 13:02:38 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2019-10-23 13:02:44 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:12
+  Rendered articles/index.html.erb within layouts/application (34.8ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 216ms (Views: 126.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-10-23 13:02:51 +0300
+Processing by ArticlesController#new as HTML
+Filter chain halted as #<Proc:0x00007fbca46d2168@/home/melkam/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.2.3/lib/action_controller/metal/http_authentication.rb:72> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for ::1 at 2019-10-23 13:03:06 +0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (195.8ms)
+  Rendered articles/new.html.erb within layouts/application (232.4ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 319ms (Views: 307.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2019-10-23 13:03:19 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eJEGwDPIxLAej2l/jCB/6iiD0DdXJGLBEcY1aqkDoirl9NkTRcalEg4u2jiIvVHgvRC5B6V6D1sAAmlRznjcCg==", "article"=>{"title"=>"hey", "text"=>"thats cool"}, "commit"=>"Create Article"}
+Filter chain halted as #<Proc:0x00007fbca46d2168@/home/melkam/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/actionpack-5.2.3/lib/action_controller/metal/http_authentication.rb:72> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for ::1 at 2019-10-23 13:03:19 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eJEGwDPIxLAej2l/jCB/6iiD0DdXJGLBEcY1aqkDoirl9NkTRcalEg4u2jiIvVHgvRC5B6V6D1sAAmlRznjcCg==", "article"=>{"title"=>"hey", "text"=>"thats cool"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:33
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/new.html.erb within layouts/application (2.7ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 62.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for ::1 at 2019-10-23 13:03:31 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6ltRTUwAEZi2D8/DT7yKt3sRfjz6hiCpVe6G3jMJr+E/rpbX7eqiqQKiXEQA1OTiNEs9tkW+Rbe1rNB7isyuQ==", "article"=>{"title"=>"heyhey", "text"=>"thats cool"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:33
+  [1m[36mArticle Create (168.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "heyhey"], ["text", "thats cool"], ["created_at", "2019-10-23 10:03:31.677931"], ["updated_at", "2019-10-23 10:03:31.677931"]]
+  ↳ app/controllers/articles_controller.rb:33
+  [1m[35m (248.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:33
+Redirected to http://localhost:3000/articles/10
+Completed 302 Found in 423ms (ActiveRecord: 417.4ms)
+
+
+Started GET "/articles/10" for ::1 at 2019-10-23 13:03:32 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:14
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (104.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:13
+  Rendered collection of templates [0 times] (0.1ms)
+  Rendered comments/_form.html.erb (49.1ms)
+  Rendered articles/show.html.erb within layouts/application (589.2ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 732ms (Views: 542.2ms | ActiveRecord: 105.0ms)
+
+
+Started POST "/articles/10/comments" for ::1 at 2019-10-23 13:03:55 +0300
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gpRB+h0wf+wxqupLcPYXUjWAgDcRbJKqwUdzt4LjR3T9w5bkd7fVIPd4XAVty7brYL3pOTuQcz66xnrtFARTcg==", "comment"=>{"commenter"=>"melkam", "body"=>"you suck"}, "commit"=>"Create Comment", "article_id"=>"10"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[36mComment Create (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "melkam"], ["body", "you suck"], ["article_id", 10], ["created_at", "2019-10-23 10:03:55.410871"], ["updated_at", "2019-10-23 10:03:55.410871"]]
+  ↳ app/controllers/comments_controller.rb:7
+  [1m[35m (218.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:7
+Redirected to http://localhost:3000/articles/10
+Completed 302 Found in 227ms (ActiveRecord: 219.0ms)
+
+
+Started GET "/articles/10" for ::1 at 2019-10-23 13:03:55 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:14
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 10]]
+  ↳ app/views/articles/show.html.erb:13
+  Rendered collection of comments/_comment.html.erb [1 times] (1.5ms)
+  Rendered comments/_form.html.erb (2.8ms)
+  Rendered articles/show.html.erb within layouts/application (16.7ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 101ms (Views: 98.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/news/sources" for ::1 at 2019-10-23 14:55:15 +0300
+Processing by NewsController#sources as HTML
+  Rendering news/sources.html.erb within layouts/application
+  Rendered news/sources.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 2954ms (Views: 771.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/news" for ::1 at 2019-10-23 14:55:29 +0300
+Processing by NewsController#news as HTML
+  Rendering news/news.html.erb within layouts/application
+  Rendered news/news.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1284ms (Views: 114.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/news" for ::1 at 2019-10-23 14:56:35 +0300
+Processing by NewsController#news as HTML
+  Rendering news/news.html.erb within layouts/application
+  Rendered news/news.html.erb within layouts/application (1.1ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 1221ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/sources" for ::1 at 2019-10-23 14:56:38 +0300
+Processing by NewsController#sources as HTML
+  Rendering news/sources.html.erb within layouts/application
+  Rendered news/sources.html.erb within layouts/application (4.6ms)
+  Rendered shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 1507ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/sources" for ::1 at 2019-10-23 15:19:30 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/news/sources"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/news/sources" for ::1 at 2019-10-23 15:19:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/news/sources"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/news/sources" for ::1 at 2019-10-23 15:19:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/news/sources"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/news/sources" for ::1 at 2019-10-23 15:19:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/news/sources"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/news/sources" for ::1 at 2019-10-23 15:20:49 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/melkam/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/news/sources"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/news/sources" for ::1 at 2019-10-23 15:20:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/news/sources"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/news/sources" for ::1 at 2019-10-23 15:23:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/news/sources"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-10-23 15:23:56 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 947ms (Views: 696.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/news" for ::1 at 2019-10-23 15:24:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/news/news"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:24:22 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.9ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1945ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/news" for ::1 at 2019-10-23 15:24:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/news/news"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:26:11 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.7ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1289ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/latest_news" for ::1 at 2019-10-23 15:26:13 +0300
+Processing by NewsController#latest_news as HTML
+  Rendering news/latest_news.html.erb within layouts/application
+  Rendered news/latest_news.html.erb within layouts/application (5.7ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1615ms (Views: 93.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/latest_news" for ::1 at 2019-10-23 15:26:22 +0300
+Processing by NewsController#latest_news as HTML
+  Rendering news/latest_news.html.erb within layouts/application
+  Rendered news/latest_news.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1530ms (Views: 104.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/latest_news" for ::1 at 2019-10-23 15:26:41 +0300
+Processing by NewsController#latest_news as HTML
+  Rendering news/latest_news.html.erb within layouts/application
+  Rendered news/latest_news.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 1381ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:36:57 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.1ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 2156ms (Views: 708.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:37:22 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.7ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1217ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:37:27 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 1203ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:37:29 +0300
+Processing by NewsController#world_news as HTML
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:37:30 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1236ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/latest_news" for ::1 at 2019-10-23 15:37:32 +0300
+Processing by NewsController#latest_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.8ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 1685ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendering news/latest_news.html.erb within layouts/application
+  Rendered news/latest_news.html.erb within layouts/application (8.6ms)
+  Rendered shared/_navigation.html.erb (0.0ms)
+Completed 200 OK in 1418ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for ::1 at 2019-10-23 15:37:33 +0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navigation.html.erb (1.1ms)
+Completed 200 OK in 76ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:37:35 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.1ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1089ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/latest_news" for ::1 at 2019-10-23 15:38:03 +0300
+Processing by NewsController#latest_news as HTML
+  Rendering news/latest_news.html.erb within layouts/application
+  Rendered news/latest_news.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 3737ms (Views: 82.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/latest_news" for ::1 at 2019-10-23 15:43:21 +0300
+Processing by NewsController#latest_news as HTML
+  Rendering news/latest_news.html.erb within layouts/application
+  Rendered news/latest_news.html.erb within layouts/application (4.5ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1615ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:43:26 +0300
+Processing by NewsController#world_news as HTML
+Completed 500 Internal Server Error in 899ms (ActiveRecord: 0.0ms)
+
+
+  
+BadRequestException (BadRequestException):
+  
+app/controllers/news_controller.rb:8:in `world_news'
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:44:02 +0300
+Processing by NewsController#world_news as HTML
+Completed 500 Internal Server Error in 924ms (ActiveRecord: 0.0ms)
+
+
+  
+BadRequestException (BadRequestException):
+  
+app/controllers/news_controller.rb:8:in `world_news'
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:47:53 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1017ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:47:57 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.5ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 997ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:48:02 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.9ms)
+  Rendered shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 4079ms (Views: 87.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:48:28 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.7ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 1137ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:48:31 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navigation.html.erb (0.6ms)
+Completed 200 OK in 999ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/latest_news" for ::1 at 2019-10-23 15:48:41 +0300
+Processing by NewsController#latest_news as HTML
+  Rendering news/latest_news.html.erb within layouts/application
+  Rendered news/latest_news.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navigation.html.erb (0.8ms)
+Completed 200 OK in 1478ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:48:44 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.5ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 996ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:50:57 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1045ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:51:56 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.9ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 869ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:59:23 +0300
+Processing by NewsController#world_news as HTML
+Completed 500 Internal Server Error in 2426ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `json' for #<NewsController:0x00007f648c2941c0>
+Did you mean?  JSON):
+  
+app/controllers/news_controller.rb:16:in `world_news'
+Started GET "/news/world_news" for ::1 at 2019-10-23 15:59:51 +0300
+Processing by NewsController#world_news as HTML
+Completed 500 Internal Server Error in 1393ms (ActiveRecord: 0.0ms)
+
+
+  
+UnauthorizedException (UnauthorizedException):
+  
+app/controllers/news_controller.rb:16:in `world_news'
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:00:07 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.9ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1204ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:00:11 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1296ms (Views: 116.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:00:19 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 1154ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:01:23 +0300
+Processing by NewsController#world_news as HTML
+Completed 500 Internal Server Error in 1331ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `status' for <RestClient::Response 200 "{\"status\":\"...">:RestClient::Response):
+  
+app/controllers/news_controller.rb:13:in `world_news'
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:03:19 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.9ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 1196ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:05:13 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1222ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:07:31 +0300
+Processing by NewsController#world_news as HTML
+Completed 500 Internal Server Error in 1304ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Array:0x00007f64843be5f8>):
+  
+app/controllers/news_controller.rb:13:in `world_news'
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:07:56 +0300
+  
+SyntaxError (/home/melkam/blog/app/controllers/news_controller.rb:13: syntax error, unexpected tSTRING_BEG
+...articles = @result["articles"."name"]
+...                              ^
+/home/melkam/blog/app/controllers/news_controller.rb:13: syntax error, unexpected ']', expecting end
+...es = @result["articles"."name"]
+...                              ^
+/home/melkam/blog/app/controllers/news_controller.rb:23: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/news_controller.rb:13: syntax error, unexpected tSTRING_BEG
+app/controllers/news_controller.rb:13: syntax error, unexpected ']', expecting end
+app/controllers/news_controller.rb:23: syntax error, unexpected end-of-input, expecting end
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:08:10 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.8ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1158ms (Views: 69.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:10:36 +0300
+Processing by NewsController#world_news as HTML
+Completed 500 Internal Server Error in 1187ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/news_controller.rb:14:in `[]'
+app/controllers/news_controller.rb:14:in `world_news'
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:11:57 +0300
+Processing by NewsController#world_news as HTML
+Completed 500 Internal Server Error in 1285ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/news_controller.rb:14:in `[]'
+app/controllers/news_controller.rb:14:in `world_news'
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:12:11 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1202ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:13:43 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 4208ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:13:49 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (20.3ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1149ms (Views: 72.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:13:53 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1286ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:19:27 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1330ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:19:32 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1210ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:19:45 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.8ms)
+  Rendered shared/_navigation.html.erb (1.5ms)
+Completed 200 OK in 1232ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:22:46 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.9ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1298ms (Views: 131.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:22:51 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.9ms)
+  Rendered shared/_navigation.html.erb (1.0ms)
+Completed 200 OK in 2552ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:31:40 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.9ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1575ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:31:46 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.7ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 1136ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:32:14 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.8ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 1231ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/latest_news" for ::1 at 2019-10-23 16:32:31 +0300
+Processing by NewsController#latest_news as HTML
+  Rendering news/latest_news.html.erb within layouts/application
+  Rendered news/latest_news.html.erb within layouts/application (5.2ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1557ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:32:45 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 1341ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:33:25 +0300
+Processing by NewsController#world_news as HTML
+Completed 500 Internal Server Error in 1087ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `title' for #<Hash:0x00007f647e0488c0>):
+  
+app/controllers/news_controller.rb:14:in `block in world_news'
+app/controllers/news_controller.rb:14:in `each'
+app/controllers/news_controller.rb:14:in `world_news'
+Started GET "/" for ::1 at 2019-10-23 16:40:55 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/melkam/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.4ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 835ms (Views: 817.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:41:07 +0300
+Processing by NewsController#world_news as HTML
+Completed 500 Internal Server Error in 1324ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `title' for #<Hash:0x00007fd5b41ea7f8>):
+  
+app/controllers/news_controller.rb:14:in `block in world_news'
+app/controllers/news_controller.rb:14:in `each'
+app/controllers/news_controller.rb:14:in `world_news'
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:42:28 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.3ms)
+  Rendered shared/_navigation.html.erb (0.7ms)
+Completed 200 OK in 1191ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:42:32 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1136ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:42:35 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navigation.html.erb (0.9ms)
+Completed 200 OK in 1224ms (Views: 97.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:43:12 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1252ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:43:40 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1137ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:43:45 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1191ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:43:47 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.7ms)
+  Rendered shared/_navigation.html.erb (0.6ms)
+Completed 200 OK in 1139ms (Views: 62.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:45:52 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.3ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1230ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:45:55 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navigation.html.erb (0.6ms)
+Completed 200 OK in 1151ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:45:58 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1143ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:46:11 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.0ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1154ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:48:54 +0300
+  
+SyntaxError (/home/melkam/blog/app/controllers/news_controller.rb:24: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/news_controller.rb:24: syntax error, unexpected end-of-input, expecting end
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:49:35 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.9ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1154ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:49:38 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 2125ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:49:45 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.1ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 1224ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:51:29 +0300
+  
+SyntaxError (/home/melkam/blog/app/controllers/news_controller.rb:25: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/news_controller.rb:25: syntax error, unexpected end, expecting end-of-input
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:51:45 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.5ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1354ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:51:49 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.6ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1216ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:52:36 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.5ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1157ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:53:24 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.7ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1124ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:53:27 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1131ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 16:53:29 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.8ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1157ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:00:06 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1266ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/latest_news" for ::1 at 2019-10-23 17:04:19 +0300
+Processing by NewsController#latest_news as HTML
+  Rendering news/latest_news.html.erb within layouts/application
+  Rendered news/latest_news.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 2501ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:09:32 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 4263ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:10:11 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.4ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1132ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:11:24 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.0ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 1150ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:11:26 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.5ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 5519ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:11:34 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.8ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1164ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:11:36 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.7ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1082ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:11:58 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.5ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1121ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:18:34 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.6ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1249ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:18:49 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (2.7ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1062ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:20:36 +0300
+Processing by NewsController#world_news as HTML
+Completed 500 Internal Server Error in 918ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `data' for #<Hash:0x00007fd5c145b2c8>):
+  
+app/controllers/news_controller.rb:13:in `world_news'
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:21:15 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navigation.html.erb (0.4ms)
+Completed 200 OK in 1118ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:21:18 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.5ms)
+  Rendered shared/_navigation.html.erb (0.5ms)
+Completed 200 OK in 973ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:21:20 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (1.0ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 996ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/latest_news" for ::1 at 2019-10-23 17:35:29 +0300
+Processing by NewsController#latest_news as HTML
+  Rendering news/latest_news.html.erb within layouts/application
+  Rendered news/latest_news.html.erb within layouts/application (4.3ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1254ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news/world_news" for ::1 at 2019-10-23 17:36:43 +0300
+Processing by NewsController#world_news as HTML
+  Rendering news/world_news.html.erb within layouts/application
+  Rendered news/world_news.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navigation.html.erb (0.3ms)
+Completed 200 OK in 1086ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
