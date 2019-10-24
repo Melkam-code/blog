@@ -1,1 +1,9 @@
-<%= @result %>
+
+
+<% @sources.each do |source| %>
+    <div class="media" style="max-width: 70rem;">
+      <div class="media-heading" style="background: #42213D; color: white;"><h4><%= source["name"] %></h4></div>
+      <div class="media-body" style="background: #683257; color: white;"><p><%= source["description"] %> <br><p>Category: </p> <%= source["category"] %></p>
+      <%= link_to source["url"], class: 'btn btn-default' do %> Continue Reading <% end %> </div>
+    </div>
+    <% end %>
