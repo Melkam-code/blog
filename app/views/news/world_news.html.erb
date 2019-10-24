@@ -1,6 +1,8 @@
 
     <% @articles.each do |article| %>
-        <li><%= article["title"] %></li>
-      <% end %>
-    </ul>
-    
+    <div class="panel panel-default" style="max-width: 70rem;">
+      <div class="panel-heading" style="background: #42213D; color: white;"><h4 class="card-title"><%= article["title"] %></h4></div>
+      <div class="panel-body" style="background: #683257; color: white;"><p class="card-text"><%= article["description"] %> <br><p>By Author: </p> <%= article["author"] %></p>
+      <%= link_to article["url"], class: 'btn btn-default' do %> Continue Reading <% end %> </div>
+    </div>
+    <% end %>
