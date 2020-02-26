@@ -135,7 +135,7 @@ GEM
     netrc (0.11.0)
     news-api (0.1.0)
     nio4r (2.4.0)
-    nokogiri (1.10.3)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     public_suffix (3.1.1)
     puma (3.12.1)
